@@ -52,15 +52,15 @@ sed "/proto='none'/aset network.\$1.delegate='0'"  package/base-files/files/bin/
 
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
 #chmod -R 755 package/lean/default-settings/po/zh-cn/more.po
-sed -i 's/"带宽监控"/"监控"/g' package/lean/default-settings/po/zh-cn/more.po
-sed -i 's/"带宽监控"/"监控"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
+#sed -i 's/"带宽监控"/"监控"/g' package/lean/default-settings/po/zh-cn/more.po
+#sed -i 's/"带宽监控"/"监控"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
 #sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-amule/po/zh-cn/amule.po
 #sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-vsftpd/po/zh-cn/vsftpd.po
 echo ''  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 echo 'msgid "NAS"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 echo 'msgstr "存储"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 #echo 'msgstr "存储"'  >> package/lean/default-settings/po/zh-cn/more.po
-sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printer/po/zh-cn/usb-printer.po
+#sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printer/po/zh-cn/usb-printer.po
 #sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
 #sed -i 's/cbi("qbittorrent"),_("qBittorrent")/cbi("qbittorrent"),_("BT下载")/g' package/lean/luci-app-qbittorrent/luasrc/controller/qbittorrent.lua
 #sed -i 's/"aMule设置"/"电驴下载"/g' package/lean/luci-app-amule/po/zh-cn/amule.po
@@ -73,44 +73,44 @@ sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printe
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-qos/po/zh-cn/qos.po
 sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 # 微信推送 英文名换成中文名
-sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/kenzo/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
-sed -i 's/>serverchan/>微信推送：/g' feeds/kenzo/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
-sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/luci/applications/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
-sed -i 's/>serverchan/>微信推送：/g' feeds/luci/applications/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
+#sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/kenzo/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
+#sed -i 's/>serverchan/>微信推送：/g' feeds/kenzo/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
+#sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/luci/applications/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
+#sed -i 's/>serverchan/>微信推送：/g' feeds/luci/applications/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
 # 删除微信推送部分IP识别。
-sed -i '1,4d' feeds/kenzo/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
-sed -i '1,4d' feeds/luci/applications/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
+#sed -i '1,4d' feeds/kenzo/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
+#sed -i '1,4d' feeds/luci/applications/luci-app-serverchan/root/usr/bin/serverchan/api/ipv4.list
 
 # 修改应用过滤位置
-sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
-sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
+#sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/controller/appfilter.lua
+#sed -i 's/"network"/"services"/g' feeds/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/dev_status.lua
 
 #更改 AdGuard Home 配置文件位置
-sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
-sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
-sed -i 's/none/redirect/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
-sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' package/feeds/packages/adguardhome/files/adguardhome.config
-sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' package/feeds/packages/adguardhome/files/adguardhome.init
-sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/kenzo/adguardhome/files/adguardhome.config
-sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/adguardhome/files/adguardhome.init
+#sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
+#sed -i 's/etc\/AdGuardHome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/luci-app-adguardhome/root/etc/init.d/AdGuardHome
+#sed -i 's/none/redirect/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
+#sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' package/feeds/packages/adguardhome/files/adguardhome.config
+#sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' package/feeds/packages/adguardhome/files/adguardhome.init
+#sed -i 's/var\/adguardhome/etc\/AdGuardHome/g' feeds/kenzo/adguardhome/files/adguardhome.config
+#sed -i 's/etc\/adguardhome.yaml/etc\/config\/AdGuardHome.yaml/g' feeds/kenzo/adguardhome/files/adguardhome.init
 #更改 AdGuard Home 打开 Web 端口
-sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
-sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
+#sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/etc/config/AdGuardHome
+#sed -i 's/3000/8080/g' feeds/kenzo/luci-app-adguardhome/root/usr/share/AdGuardHome/AdGuardHome_template.yaml
 
 
 #关闭自建私有源签名验证
 #sed -i '90d' package/system/opkg/Makefile
 
 #自动共享
-sed -i 's/a.default = "0"/a.default = "1"/g' ./feeds/luci/applications/luci-app-cifsd/luasrc/controller/cifsd.lua
+#sed -i 's/a.default = "0"/a.default = "1"/g' ./feeds/luci/applications/luci-app-cifsd/luasrc/controller/cifsd.lua
 
 #设置文件权限
-chmod -R 755 files/usr/bin/AdGuardHome
-chmod -R 755 files/usr/bin/dnsproxy
-chmod -R 755 files/usr/bin/kcptun-client
-chmod -R 755 files/usr/bin/trojan-go
-chmod -R 755 files/usr/bin/v2ray-plugin
-chmod -R 755 files/usr/bin/xray
+#chmod -R 755 files/usr/bin/AdGuardHome
+#chmod -R 755 files/usr/bin/dnsproxy
+#chmod -R 755 files/usr/bin/kcptun-client
+#chmod -R 755 files/usr/bin/trojan-go
+#chmod -R 755 files/usr/bin/v2ray-plugin
+#chmod -R 755 files/usr/bin/xray
 
 #echo '修改文件'
 #rm -rf package/base-files/files/etc/banner
