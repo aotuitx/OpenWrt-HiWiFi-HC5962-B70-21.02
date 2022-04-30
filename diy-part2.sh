@@ -56,9 +56,9 @@ sed "/proto='none'/aset network.\$1.delegate='0'"  package/base-files/files/bin/
 #sed -i 's/"带宽监控"/"监控"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
 #sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-amule/po/zh-cn/amule.po
 #sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-vsftpd/po/zh-cn/vsftpd.po
-echo ''  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
-echo 'msgid "NAS"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
-echo 'msgstr "存储"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
+#echo ''  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
+#echo 'msgid "NAS"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
+#echo 'msgstr "存储"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 #echo 'msgstr "存储"'  >> package/lean/default-settings/po/zh-cn/more.po
 #sed -i 's/"网络存储"/"存储"/g' feeds/luci/applications/luci-app-usb-printer/po/zh-cn/usb-printer.po
 #sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
@@ -71,7 +71,7 @@ echo 'msgstr "存储"'  >> feeds/luci/modules/luci-base/po/zh-cn/base.po
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-nft-qos/po/zh-cn/nft-qos.po
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-openvpn/po/zh-cn/openvpn.po
 #sed -i 's/"服务"/"应用"/g' feeds/luci/applications/luci-app-qos/po/zh-cn/qos.po
-sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
+#sed -i 's/"服务"/"应用"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 # 微信推送 英文名换成中文名
 #sed -i 's/translate("ServerChan")/translate("微信推送：")/g' feeds/kenzo/luci-app-serverchan/luasrc/model/cbi/serverchan/setting.lua
 #sed -i 's/>serverchan/>微信推送：/g' feeds/kenzo/luci-app-serverchan/luasrc/view/serverchan/serverchan_status.htm
